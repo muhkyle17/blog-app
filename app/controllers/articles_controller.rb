@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
     if @article.save
-      flash[:notice] = "Article was created successfully."
+      flash[:notice] = "Post was created successfully."
       redirect_to @article
     else 
       render 'new'
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(params.require(:article).permit(:title, :description))
-      flash[:notice] = "Article was updated successfully."
+      flash[:notice] = "Post was updated successfully."
       redirect_to @article
     else
       render 'edit'

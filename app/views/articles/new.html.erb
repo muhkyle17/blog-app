@@ -1,7 +1,7 @@
 <h1> Create a new article </h1>
 
 <% if @article.errors.any? %>
-<h2>The following errors prevented the articles from being saved</h2>
+<h2>The following errors prevented the post from being saved</h2>
   <ul>
     <% @article.errors.full_messages.each do |msg| %>
       <li> <%= msg %> </li>
@@ -27,4 +27,4 @@
 
 <% end %>
 
-<%= link_to 'Return to articles listing', articles_path %>
+<%= link_to 'Return to books listing', articles_path %>
